@@ -7,4 +7,4 @@ edition = "2021"
 
 [dependencies]
 bevy = "0.8"
-mnwe_lib = { path = "../mnwe_lib" }
+bevy_ecs_tilemap = "0.7.0"

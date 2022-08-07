@@ -3,5 +3,4 @@ resolver="2"
 
 members = [
     "mnwe_game",
-    "mnwe_lib",
 ]
