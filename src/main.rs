@@ -8,20 +8,17 @@ fn main() {
             ..Default::default()
         })
         .add_plugins(DefaultPlugins)
-        .add_startup_system(spawn_camera)
         .add_startup_system(spawn_tilemap)
         .run();
-}
-
-fn spawn_camera(mut commands: Commands) {
-    info!("Spawning camera");
-    commands.spawn_bundle(Camera2dBundle::default());
 }
 
 fn spawn_tilemap(
     mut commands: Commands,
     asset_server: Res<AssetServer>,
 ) {
+    info!("Spawning camera");
+    commands.spawn_bundle(Camera2dBundle::default());
+
     let texture_handle: Handle<Image> = asset_server.load("tiles.png");
 
     let tilemap_size = TilemapSize { x: 32, y: 32 };
