@@ -8,6 +8,7 @@ fn main() {
             ..Default::default()
         })
         .add_plugins(DefaultPlugins)
+        .add_plugin(TilemapPlugin)
         .add_startup_system(spawn_tilemap)
         .run();
 }
